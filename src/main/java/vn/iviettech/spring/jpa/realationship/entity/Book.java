@@ -20,13 +20,16 @@ public class Book {
     @Column(name = "author")
     private String author;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "categoryId")
     private Category category;
 
     @OneToOne(cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
     private BookDetails bookDetails;
+
+    public Book() {
+    }
 
     public int getId() {
         return id;

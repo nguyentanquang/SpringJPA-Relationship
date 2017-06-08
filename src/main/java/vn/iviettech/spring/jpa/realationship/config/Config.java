@@ -26,7 +26,7 @@ public class Config {
     DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:2433/BookJPA"); //spring-jpa-1: database name
+        dataSource.setUrl("jdbc:mysql://localhost:2433/springjpabook"); //spring-jpa-1: database name
         dataSource.setUsername("root");
         dataSource.setPassword("1234");
         return  dataSource;
@@ -40,7 +40,7 @@ public class Config {
         // initialize our configuration with the default settings that are compatible with Hibernate
         entityManager.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         // base package to scan for entity classess
-        entityManager.setPackagesToScan("com.ivt.spring.jpa.demo1.entity");
+        entityManager.setPackagesToScan("vn.iviettech.spring.jpa.realationship.entity");
 
         // JPA properties
         Properties jpaProperties = new Properties();

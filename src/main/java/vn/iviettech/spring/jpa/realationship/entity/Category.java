@@ -24,6 +24,8 @@ public class Category {
     @OneToMany(mappedBy = "category", fetch = FetchType.EAGER)
     private List<Book> bookList;
 
+    public Category() {
+    }
 
     public int getId() {
         return id;

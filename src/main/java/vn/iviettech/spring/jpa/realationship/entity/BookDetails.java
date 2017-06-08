@@ -31,6 +31,9 @@ public class BookDetails {
     @OneToOne(mappedBy = "bookDetails")
     private Book book;
 
+    public BookDetails() {
+    }
+
     public int getId() {
         return id;
     }
